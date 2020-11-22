@@ -3,6 +3,6 @@
 CHCP 65001 
 cd "%~dp0"
 
-venv\scripts\python smart-school.py
+python smart-school.py
 
 pause
