@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.action_chains import ActionChains
+import json
 import os
 import pdb
 
@@ -106,10 +107,13 @@ def main():
     browser.get('https://www.webtop.co.il/v2/default.aspx')
     browser.create_options().add_experimental_option("detach", True)
 
-    data = {'name': 'tbener12',
-            'password': 'ofri2006',
-            'Yuvaley': [True, False],   # Maayan, Adi
-            "Mevo'ot": []}
+    # data = {'name': 'tbener12',
+    #         'password': 'ofri2006',
+    #         'Yuvaley': [True, True],   # Maayan, Adi
+    #         "Mevo'ot": []}
+
+    with open('data.txt') as json_file:
+        data = json.load(json_file)
 
     login(browser, data['name'], data['password'])
 

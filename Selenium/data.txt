@@ -1,0 +1,6 @@
+{
+  "name": "tbener12",
+  "password": "ofri2006",
+  "Yuvaley": [true, true],
+  "Mevo'ot": []
+}
